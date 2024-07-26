@@ -6,7 +6,7 @@
     --primary: #d5a2f9;
     --fg: #655173;
     --copy: #ffffff;
-    --copinv: #000;
+    --copinv: #aaaaaa;
 }
 
 h1 {
@@ -63,22 +63,22 @@ body {
 }
 
 .search input {
-    font-size: 1rem;
+font-size: 1rem;
   flex: 1; 
   padding: 0; 
   border: none;
   outline: transparent;
 }
 
-.search-input::placeholder {
-  color: var(--copyinv);
+.search input::placeholder {
+  color: rgb(176, 176, 176)
 }
 
 .search-btn i {
-    color: #000;
+    color: #303030;
 }
 
-  .search-btn {
+.search-btn {
     background: none;
     border: none;
     outline: transparent;
