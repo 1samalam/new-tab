@@ -63,6 +63,7 @@ body {
 }
 
 .search input {
+    font-size: 1rem;
   flex: 1; 
   padding: 0; 
   border: none;
@@ -133,6 +134,10 @@ body {
 footer {
     position: absolute;
     bottom: 10px;
+}
+
+footer p {
+    font-size: 1rem;
 }
 
 footer span {
