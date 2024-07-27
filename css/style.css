@@ -2,16 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 :root {
     --ff: 'DM Sans', sans-serif;
-    --bg: rgb(32, 32, 32);
-    --primary: #d5a2f9;
-    --fg: #655173;
-    --copy: #ffffff;
-    --copinv: #aaaaaa;
+    --bg: #171319; /* background color */
+    --primaryHex: rgb(179, 129, 255);
+    --primary: 179, 129, 255;
+    --fg: black; /* default value */
 }
 
 h1 {
-    font-size: 120px;
-    line-height: 4rem;
+    font-size: 120px;   
+    line-height: 4rem;  
 }
 
 p, a {
@@ -20,14 +19,14 @@ p, a {
 
 
 ::selection {
-    background-color: rgba(103, 137, 247, 0.335);
+    background-color: rgba(var(--primary), 0.30);
 }
 
 body {
     font-family: var(--ff);
     height: 100vh;
     background: var(--bg);
-    color: var(--copy);
+    color: rgb(var(--fg));
 }
 
 .content {
@@ -54,40 +53,42 @@ body {
     gap: 1rem;
     width: 80%;
     max-width: 600px;
-    background-color: var(--copy);
+    background-color: var(--bg);
     border: none;
     outline: transparent;
     border-radius: 1rem;
     padding: 1rem;
-    box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.23);
+    border: 1px solid rgba(var(--fg), 0.2);
 }
 
 .search input {
+    color: rgb(var(--fg));
+    caret-color: rgb(var(--primary));
 font-size: 1rem;
   flex: 1; 
   padding: 0; 
   border: none;
   outline: transparent;
+  background-color: inherit
 }
 
 .search input::placeholder {
-  color: rgb(176, 176, 176)
+    color: rgba(var(--fg), 0.6);
 }
 
 .search-btn i {
-    color: #303030;
+    color: rgba(var(--fg), 0.6);
 }
 
 .search-btn {
     background: none;
     border: none;
     outline: transparent;
-    color: var(--copy);
     cursor: pointer;
 }
 
 .time h1 {
-    color: var(--primary);
+    color: rgb(var(--primary));
 }
 
 .links {
@@ -98,7 +99,7 @@ font-size: 1rem;
 
 .icon {
     background-color: transparent;
-    color: var(--copyinv);
+    color: rgba(var(--fg), 1);
     height: 100%;
     font-size: 3rem;
     display: flex; 
@@ -111,7 +112,7 @@ font-size: 1rem;
   }
 
   .icon:hover {
-    background-color: var(--fg);
+    background-color: rgba(var(--primary), 0.335);
   }
   
   .links div:hover .label {
@@ -127,7 +128,7 @@ font-size: 1rem;
   .label {
     font-size: 1rem;
     text-align: center;
-    color: var(--primary);
+    color: rgb(var(--fg));
 }
 
   
@@ -141,7 +142,7 @@ footer p {
 }
 
 footer span {
-    color: var(--primary);
+    color: rgb(var(--primary));
 }
 
 @media (max-height: 600px) {
